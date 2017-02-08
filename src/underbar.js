@@ -240,17 +240,10 @@
   //   }); // obj1 now contains key1, key2, key3 and bla
   _.extend = function(obj) {
     for (var i = 1; i < arguments.length; i++) {
-      console.log('first', arguments[i]);
       _.each(arguments[i], function(value, key) {
-        // console.log(value);
-        console.log('second', arguments[i]);
-        console.log(key);
         obj[key] = value;
-        // obj[key] = arguments[i][key];
       });
     }
-    // console.log('----------------------------result obj : ');
-    // console.log(obj);
     return obj;
   };
 
